@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nature-forest: #5A9A53;
+  --color-nature-leaf: #8BC285;
+  --color-nature-earth: #C69C72;
+  --color-nature-sage: #C4E9CC;
+  --color-nature-mist: #F7FAF7;
+  --color-nature-cream: #FEFDF5;
+  --color-nature-stone: #777777;
+  --color-nature-moss: #6B8E91;
+  
+  /* Mapping VIB colors to nature colors to maintain compatibility */
+  --color-vib-blue: var(--color-nature-forest);
+  --color-vib-blue-dark: #4A8B43;
+  --color-vib-blue-light: var(--color-nature-mist);
+  --color-vib-orange: #CD7F32; /* Lighter Earthy Orange/Brown */
+  --color-vib-orange-light: var(--color-nature-cream);
+  
+  --font-sans: "Be Vietnam Pro", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FDFCF0] text-stone-800 antialiased; /* Using cream background */
+    font-size: 13px;
+  }
+}
+
+@layer components {
+  .raci-vertical-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+}
