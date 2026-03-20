@@ -137,19 +137,19 @@ export default function App() {
   return (
     <div className="flex h-screen bg-nature-mist overflow-hidden font-sans">
       {/* Sidebar */}
-      <aside className="w-72 bg-nature-moss text-white flex flex-col shrink-0 border-r border-white/10">
-        <div className="p-6 border-b border-white/10">
+      <aside className="w-72 bg-nature-moss-dark text-white flex flex-col shrink-0 border-r border-white/10 shadow-2xl z-20">
+        <div className="p-6 border-b border-white/10 bg-nature-moss/20">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 bg-vib-blue rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-vib-blue rounded-lg flex items-center justify-center shadow-inner">
               <Database size={18} className="text-white" />
             </div>
             <span className="font-bold text-sm tracking-tight">VIB PROJECT PORTAL</span>
           </div>
-          <p className="text-[10px] text-stone-200 uppercase tracking-widest font-bold">Quản trị vận hành & RACI</p>
+          <p className="text-[10px] text-stone-300 uppercase tracking-widest font-bold">Quản trị vận hành & RACI</p>
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 space-y-1 custom-scrollbar">
-          <div className="px-3 py-2 text-[10px] font-bold text-stone-200 uppercase tracking-wider">Danh sách dự án</div>
+          <div className="px-3 py-2 text-[10px] font-bold text-stone-400 uppercase tracking-wider">Danh sách dự án</div>
           {allProjects.map((project) => {
             const Icon = project.icon;
             const isActive = activeProjectId === project.id;
@@ -159,16 +159,16 @@ export default function App() {
                 onClick={() => setActiveProjectId(project.id)}
                 className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl transition-all group ${
                   isActive 
-                    ? 'bg-vib-blue text-white shadow-lg shadow-nature-forest/20' 
-                    : 'text-stone-100 hover:bg-stone-600 hover:text-white'
+                    ? 'bg-vib-blue text-white shadow-lg shadow-black/20' 
+                    : 'text-stone-300 hover:bg-white/10 hover:text-white'
                 }`}
               >
-                <div className={`p-2 rounded-lg ${isActive ? 'bg-white/20' : 'bg-stone-600 group-hover:bg-stone-500'}`}>
+                <div className={`p-2 rounded-lg ${isActive ? 'bg-white/20' : 'bg-nature-moss group-hover:bg-nature-moss/80'}`}>
                   <Icon size={16} />
                 </div>
                 <div className="text-left">
                   <div className="text-[11px] font-bold leading-none mb-1">{project.name}</div>
-                  <div className={`text-[9px] truncate w-36 ${isActive ? 'text-white/70' : 'text-stone-100'}`}>{project.description}</div>
+                  <div className={`text-[9px] truncate w-36 ${isActive ? 'text-white/70' : 'text-stone-400 group-hover:text-stone-200'}`}>{project.description}</div>
                 </div>
                 {isActive && <ChevronRight size={14} className="ml-auto opacity-50" />}
               </button>
@@ -182,14 +182,14 @@ export default function App() {
               <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-[10px] font-bold text-white">HỆ THỐNG ĐANG CHẠY</span>
             </div>
-            <p className="text-[9px] text-stone-200 leading-relaxed">Dữ liệu được đồng bộ hóa thời gian thực với LocalStorage.</p>
+            <p className="text-[9px] text-stone-300 leading-relaxed">Dữ liệu được đồng bộ hóa thời gian thực với LocalStorage.</p>
           </div>
         </div>
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <header className="bg-vib-blue text-white p-10 md:px-12 md:py-10 relative overflow-hidden shrink-0">
+      <div className="flex-1 flex flex-col overflow-hidden bg-nature-mist">
+        <header className="bg-vib-blue text-white p-10 md:px-12 md:py-10 relative overflow-hidden shrink-0 shadow-lg">
           <div className="absolute top-[-60px] right-[-60px] w-[300px] h-[300px] rounded-full bg-white/5 pointer-events-none" />
           <div className="absolute bottom-[-40px] left-[30%] w-[200px] h-[200px] rounded-full bg-vib-orange/15 pointer-events-none" />
           
@@ -313,7 +313,7 @@ export default function App() {
       </nav>
 
       {/* CONTENT */}
-      <main className="flex-1 overflow-y-auto p-8 md:px-12 bg-stone-50 custom-scrollbar">
+      <main className="flex-1 overflow-y-auto p-8 md:px-12 bg-nature-mist custom-scrollbar">
         <div className="max-w-7xl mx-auto w-full">
           <AnimatePresence mode="wait">
             <motion.div

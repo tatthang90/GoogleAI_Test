@@ -385,14 +385,21 @@ const crmProject: ProjectData = {
   governance: {
     meetings: [
       { name: '🔴 Daily Issue Standup', freq: 'Hàng ngày 15\'', lead: 'Linh Chi (SA&QA)', participants: 'SA lead, Dev Giang, Ops Tú Kiệt', output: 'Issue status, blockers cleared' },
+      { name: '🔵 Weekly Tech Sync', freq: 'Hàng tuần', lead: 'Tùng Giang (Dev)', participants: 'Dev team, SA lead, Data lead', output: 'Technical alignment, release readiness' },
       { name: '🟡 Weekly Ops Review', freq: 'Hàng tuần', lead: 'Head CRM (PM hỗ trợ điều phối)', participants: 'All team leads + Deloitte PM', output: 'SLA review, release plan, adoption metrics, risks' },
-      { name: '🟢 Bi-weekly Sprint Review', freq: '2 tuần/lần', lead: 'PO (Trang) + Dev Manager (Giang)', participants: 'PO, SA, Dev, BU Business Owner đại diện', output: 'Sprint demo, backlog grooming, next sprint plan' }
+      { name: '🟢 Bi-weekly Sprint Review', freq: '2 tuần/lần', lead: 'PO (Trang) + Dev Manager (Giang)', participants: 'PO, SA, Dev, BU Business Owner đại diện', output: 'Sprint demo, backlog grooming, next sprint plan' },
+      { name: '🟠 Monthly Steering Committee', freq: 'Hàng tháng', lead: 'BOD / Head CRM', participants: 'BOD, Head of BUs, Project Sponsors', output: 'Strategic decisions, budget approval, long-term roadmap' }
     ],
     issues: [
-      { issue: 'Upload file campaign có cần raise change không?', solution: '3 loại: (1) Routine ops (upload theo SOP đã duyệt) → không cần. (2) Config change → ITSM ticket, Ops xử lý. (3) New feature → PO backlog. Cần viết SOP phân loại + publish BU.', owner: 'Head CRM + Dev Mgr quyết định rule. PM điều phối viết SOP.', deadline: '25/3/2026', priority: 'Critical' }
+      { issue: 'Upload file campaign có cần raise change không?', solution: '3 loại: (1) Routine ops (upload theo SOP đã duyệt) → không cần. (2) Config change → ITSM ticket, Ops xử lý. (3) New feature → PO backlog. Cần viết SOP phân loại + publish BU.', owner: 'Head CRM + Dev Mgr quyết định rule. PM điều phối viết SOP.', deadline: '25/3/2026', priority: 'Critical' },
+      { issue: 'Thiếu Solution Architect nội bộ sau khi Deloitte rút quân', solution: 'Đẩy nhanh quy trình tuyển dụng (đã có JD). Trong lúc chờ: Assign Tùng Giang & Linh Chi cover technical design review.', owner: 'Head CRM + HR', deadline: '15/4/2026', priority: 'Critical' },
+      { issue: 'Dữ liệu Corebank mới chưa mapping hoàn toàn sang CRM', solution: 'Team Data (Thắng) phối hợp với team Corebank mapping từng field. Ưu tiên các field liên quan đến Card & Lending trước.', owner: 'Nguyễn Tất Thắng', deadline: '30/3/2026', priority: 'High' }
     ],
     actionPlan: [
-      { id: 1, item: 'Lên lịch & xác nhận danh sách tham dự session bàn giao Deloitte (theo ma trận module)', owner: 'Head CRM + PM (điều phối lịch)', deadline: '20/3', status: 'Chưa làm' }
+      { id: 1, item: 'Lên lịch & xác nhận danh sách tham dự session bàn giao Deloitte (theo ma trận module)', owner: 'Head CRM + PM (điều phối lịch)', deadline: '20/3', status: 'Đang làm' },
+      { id: 2, item: 'Hoàn thiện tài liệu SOP phân loại Issue vs Change Request', owner: 'PM + Support Lead', deadline: '25/3', status: 'Cần khởi động' },
+      { id: 3, item: 'Review backlog CR003 với Deloitte trước khi kết thúc Hypercare', owner: 'PO Dung + SA Chi', deadline: '28/3', status: 'Đang làm' },
+      { id: 4, item: 'Thiết lập Dashboard theo dõi Adoption KPIs trên PowerBI', owner: 'Nguyễn Tất Thắng', deadline: '05/4', status: 'Chưa làm' }
     ]
   }
 };

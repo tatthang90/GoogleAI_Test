@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-nature-forest: #5A9A53;
+  --color-nature-forest: #3D6B35;
+  --color-nature-forest-dark: #2D4F27;
   --color-nature-leaf: #8BC285;
   --color-nature-earth: #C69C72;
   --color-nature-sage: #C4E9CC;
   --color-nature-mist: #F7FAF7;
   --color-nature-cream: #FEFDF5;
   --color-nature-stone: #777777;
-  --color-nature-moss: #6B8E91;
+  --color-nature-moss: #4A6B6E;
+  --color-nature-moss-dark: #2C3E40;
   
   /* Mapping VIB colors to nature colors to maintain compatibility */
   --color-vib-blue: var(--color-nature-forest);
-  --color-vib-blue-dark: #4A8B43;
+  --color-vib-blue-dark: var(--color-nature-forest-dark);
   --color-vib-blue-light: var(--color-nature-mist);
   --color-vib-orange: #CD7F32; /* Lighter Earthy Orange/Brown */
   --color-vib-orange-light: var(--color-nature-cream);
